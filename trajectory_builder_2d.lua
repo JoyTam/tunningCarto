@@ -43,7 +43,7 @@ TRAJECTORY_BUILDER_2D = {
   },
 
   ceres_scan_matcher = {
-    occupied_space_weight = 10.,
+    occupied_space_weight = 13.,
     translation_weight = 10.,
     rotation_weight = 3.,
     ceres_solver_options = {
@@ -62,7 +62,7 @@ TRAJECTORY_BUILDER_2D = {
   imu_gravity_time_constant = 10.,
 
   submaps = {
-    num_range_data = 3,
+    num_range_data = 4,
     grid_options_2d = {
       grid_type = "PROBABILITY_GRID",
       resolution = 0.05,
