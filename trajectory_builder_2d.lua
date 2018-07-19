@@ -15,10 +15,10 @@
 TRAJECTORY_BUILDER_2D = {
   use_imu_data = false,
   min_range = 0.5,
-  max_range = 15.,
-  min_z = 0.8,
+  max_range = 8.,
+  min_z = 0.7,
   max_z = 2.,
-  missing_data_ray_length = 10.,
+  missing_data_ray_length = 8.,
   num_accumulated_range_data = 1,
   voxel_filter_size = 0.025,
 
@@ -45,7 +45,7 @@ TRAJECTORY_BUILDER_2D = {
   ceres_scan_matcher = {
     occupied_space_weight = 10.,
     translation_weight = 10.,
-    rotation_weight = 1.,
+    rotation_weight = 0.6,
     ceres_solver_options = {
       use_nonmonotonic_steps = false,
       max_num_iterations = 20,
