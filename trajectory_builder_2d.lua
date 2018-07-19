@@ -16,7 +16,7 @@ TRAJECTORY_BUILDER_2D = {
   use_imu_data = false,
   min_range = 0.5,
   max_range = 15.,
-  min_z = 0.3,
+  min_z = 0.8,
   max_z = 2.,
   missing_data_ray_length = 10.,
   num_accumulated_range_data = 1,
@@ -43,9 +43,9 @@ TRAJECTORY_BUILDER_2D = {
   },
 
   ceres_scan_matcher = {
-    occupied_space_weight = 1.,
-    translation_weight = 10.,
-    rotation_weight = 10.,
+    occupied_space_weight = 10.,
+    translation_weight = 20.,
+    rotation_weight = 5.,
     ceres_solver_options = {
       use_nonmonotonic_steps = false,
       max_num_iterations = 20,
@@ -62,7 +62,7 @@ TRAJECTORY_BUILDER_2D = {
   imu_gravity_time_constant = 10.,
 
   submaps = {
-    num_range_data = 2,
+    num_range_data = 3,
     grid_options_2d = {
       grid_type = "PROBABILITY_GRID",
       resolution = 0.05,
